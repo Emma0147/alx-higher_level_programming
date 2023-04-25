@@ -12,13 +12,13 @@ request(url, function (err, response, body) {
     for (const filmIndex in films) {
       const filmChars = films[filmIndex].characters;
       for (const charIndex in filmChars) {
-	if (filmChars[charIndex].include('18')) {
-	  count++;
-	}
+        if (filmChars[charIndex].includes('18')) {
+          count++;
+        }
       }
     }
     console.log(count);
   } else {
-	  console.log('An error occcured. Status code: ' + response.statusCode);
+    console.log('An error occured. Status code: ' + response.statusCode);
   }
 });
